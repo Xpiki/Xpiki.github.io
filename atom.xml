@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Xpiki.github.io/</id>
     <title>pk&apos;s blog</title>
-    <updated>2019-06-06T13:59:46.842Z</updated>
+    <updated>2019-06-08T08:00:49.583Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Xpiki.github.io/"/>
     <link rel="self" href="https://Xpiki.github.io//atom.xml"/>
@@ -10,6 +10,34 @@
     <logo>https://Xpiki.github.io//images/avatar.png</logo>
     <icon>https://Xpiki.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, pk&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[[前端]Css-css引用的三种方法及其优先级]]></title>
+        <id>https://Xpiki.github.io//post/qian-duan-css</id>
+        <link href="https://Xpiki.github.io//post/qian-duan-css">
+        </link>
+        <updated>2019-06-07T13:59:08.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="css引用的三种方法优先级">CSS引用的三种方法(优先级)</h1>
+<h2 id="内联式css设置">内联式CSS设置</h2>
+<p>把css代码直接写在现有的html标签中 如：</p>
+<pre><code>&lt;p style=&quot;color:red&quot;&gt;这里文字是红色。&lt;/p&gt;
+</code></pre>
+<h2 id="嵌入式css设置">嵌入式CSS设置</h2>
+<p>把css代码写在<style></style>标签之间</p>
+<pre><code>&lt;style type=&quot;text/css&quot;&gt;
+span{
+color:red;
+}
+&lt;/style&gt;
+</code></pre>
+<h2 id="外部式css设置">外部式CSS设置</h2>
+<p>把css代码写成一个单独的外部文件 在<head>内使用<link>引入</p>
+<pre><code>&lt;link href=&quot;index.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+</code></pre>
+<h2 id="优先级顺序">优先级顺序</h2>
+<p><strong>在三个方法权值相同的情况下，并且嵌入式在外部式前面调用
+(内联式 &gt; 嵌入式 &gt; 外部式)</strong></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[前端]English]]></title>
         <id>https://Xpiki.github.io//post/qian-duan-english</id>
@@ -25,6 +53,7 @@
 <li>target 目标</li>
 <li>blank 空白</li>
 <li>multiple 众多</li>
+<li>stylesheet 样式表</li>
 <li></li>
 </ul>
 <h2 id="sentence"><strong>[sentence]</strong></h2>
