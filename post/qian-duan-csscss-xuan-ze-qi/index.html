@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>[前端]Css-css引用的三种方法及其优先级 | pk&#39;s blog</title>
+<title>[前端]Css选择器 | pk&#39;s blog</title>
 <meta name="description" content="不求甚解">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -92,30 +92,64 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">[前端]Css-css引用的三种方法及其优先级</h2>
-            <div class="post-date">2019-06-07</div>
+            <h2 class="post-title">[前端]Css选择器</h2>
+            <div class="post-date">2019-06-09</div>
             
             <div class="post-content">
-              <h1 id="css引用的三种方法优先级">CSS引用的三种方法(优先级)</h1>
-<h2 id="内联式css设置">内联式CSS设置</h2>
-<p>把css代码直接写在现有的html标签中 如：</p>
-<pre><code>&lt;p style=&quot;color:red&quot;&gt;这里文字是红色。&lt;/p&gt;
+              <h1 id="css选择器分类">CSS选择器分类</h1>
+<ul>
+<li>
+<p>标签选择器</p>
+</li>
+<li>
+<p>类选择器(.)</p>
+</li>
+<li>
+<p>ID选择器(#)</p>
+</li>
+<li>
+<p>子选择器</p>
+<p><strong>用大于号(&gt;)表示，用于选择制定标签元素的第一代子元素</strong></p>
+</li>
+</ul>
+<pre><code>	 .main&gt;li
 </code></pre>
-<h2 id="嵌入式css设置">嵌入式CSS设置</h2>
-<p>把css代码写在<style></style>标签之间</p>
-<pre><code>&lt;style type=&quot;text/css&quot;&gt;
-span{
-color:red;
-}
-&lt;/style&gt;
+<ul>
+<li>
+<p>包含(后代选择器)</p>
+<p><strong>选择指定标签下的所有后辈元素</strong></p>
+</li>
+</ul>
+<pre><code>   .main li
 </code></pre>
-<h2 id="外部式css设置">外部式CSS设置</h2>
-<p>把css代码写成一个单独的外部文件 在<head>内使用<link>引入</p>
-<pre><code>&lt;link href=&quot;index.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+<ul>
+<li>
+<p>通用选择器</p>
+<p><strong>通常网页会加上</strong></p>
+</li>
+</ul>
+<pre><code> 	*{
+ 	margin:0;
+ 	padding:0;
+ 	}个别浏览器中网页的body有默认的  8px 的margin
 </code></pre>
-<h2 id="优先级顺序">优先级顺序</h2>
-<p><strong>在三个方法权值相同的情况下，并且嵌入式在外部式前面调用
-(内联式 &gt; 嵌入式 &gt; 外部式)</strong></p>
+<ul>
+<li>
+<p>伪类选择符</p>
+<p><strong>它允许给html不存在的标签或标签的某种状态设置样式</strong></p>
+</li>
+</ul>
+<pre><code> 	a:hover{color:red}
+</code></pre>
+<p><em>注意：目前比较常用的可以兼容所有浏览器的伪类选择符是a:hover,另外比如 p:hover也存在，但兼容性不好</em></p>
+<ul>
+<li>
+<p>分组选择符</p>
+<p><strong>为多个标签元素设置同一个样式</strong></p>
+</li>
+</ul>
+<pre><code> h1,span{color:red;}
+</code></pre>
 
             </div>
             
@@ -134,9 +168,9 @@ color:red;
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://Xpiki.github.io//post/qian-duan-english">
+                <a href="https://Xpiki.github.io//post/qian-duan-css">
                   <h3 class="post-title">
-                    [积累]English
+                    [前端]Css-css引用的三种方法及其优先级
                   </h3>
                 </a>
               </div>

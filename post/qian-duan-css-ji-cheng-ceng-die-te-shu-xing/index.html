@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>[前端]Css-css引用的三种方法及其优先级 | pk&#39;s blog</title>
+<title>[前端]css-继承/层叠/特殊性 | pk&#39;s blog</title>
 <meta name="description" content="不求甚解">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -92,51 +92,68 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">[前端]Css-css引用的三种方法及其优先级</h2>
-            <div class="post-date">2019-06-07</div>
+            <h2 class="post-title">[前端]css-继承/层叠/特殊性</h2>
+            <div class="post-date">2019-06-09</div>
             
             <div class="post-content">
-              <h1 id="css引用的三种方法优先级">CSS引用的三种方法(优先级)</h1>
-<h2 id="内联式css设置">内联式CSS设置</h2>
-<p>把css代码直接写在现有的html标签中 如：</p>
-<pre><code>&lt;p style=&quot;color:red&quot;&gt;这里文字是红色。&lt;/p&gt;
-</code></pre>
-<h2 id="嵌入式css设置">嵌入式CSS设置</h2>
-<p>把css代码写在<style></style>标签之间</p>
-<pre><code>&lt;style type=&quot;text/css&quot;&gt;
-span{
-color:red;
+              <ul>
+<li>继承</li>
+</ul>
+<pre><code>p{
+color:red
 }
-&lt;/style&gt;
+&lt;p&gt;i am&lt;span&gt;jpk&lt;/span&gt;&lt;/p&gt;
 </code></pre>
-<h2 id="外部式css设置">外部式CSS设置</h2>
-<p>把css代码写成一个单独的外部文件 在<head>内使用<link>引入</p>
-<pre><code>&lt;link href=&quot;index.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+<p>对p标签设置文字颜色,span中的文字颜色也发生改变
+注意;只有部分css样式具有继承性
+例如:</p>
+<pre><code>p{
+border:1px solid red;
+}
 </code></pre>
-<h2 id="优先级顺序">优先级顺序</h2>
-<p><strong>在三个方法权值相同的情况下，并且嵌入式在外部式前面调用
-(内联式 &gt; 嵌入式 &gt; 外部式)</strong></p>
+<p>border样式只对p标签生效，对span不起作用</p>
+<ul>
+<li>层叠</li>
+</ul>
+<pre><code>p{color:red;}
+p{color:green;}
+&lt;p class=&quot;first&quot;&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;
+</code></pre>
+<ul>
+<li>特殊性
+同时为标签设置css样式时</li>
+</ul>
+<pre><code>	p{
+	color:red;
+	}
+	.first{
+	color:blue;
+	}
+	&lt;p class=&quot;first&quot;&gt;abc&lt;/p&gt;
+</code></pre>
+<p>最终页面上显示的蓝色,即类选择器的属性。
+因为浏览器是根据权值来判断使用css样式的
+权值规则:</p>
+<h3 id="pcolorred-权值为1">p{color:red;} /<em>权值为1</em>/</h3>
+<h3 id="p-spancolorgreen-权值为112">p span{color:green;} /<em>权值为1+1=2</em>/</h3>
+<h3 id="warningcolorwhite-权值为10">.warning{color:white;} /<em>权值为10</em>/</h3>
+<h3 id="p-spanwarningcolorpurple-权值为111012">p span.warning{color:purple;} /<em>权值为1+1+10=12</em>/</h3>
+<h3 id="footer-note-pcoloryellow-权值为100101111">#footer .note p{color:yellow;} /<em>权值为100+10+1=111</em>/</h3>
+<p>注意：还有一个权值比较特殊--继承也有权值但很低，有的文献提出它只有0.1，所以可以理解为继承的权值最低</p>
+<ul>
+<li>重要性
+<strong>!important;
+最高权值</strong></li>
+</ul>
 
             </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://Xpiki.github.io//tag/9oBUmXaUM" class="tag">
-                    css
-                  </a>
-                
-                  <a href="https://Xpiki.github.io//tag/8syiHFMDl" class="tag">
-                    我爱前端
-                  </a>
-                
-              </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://Xpiki.github.io//post/qian-duan-english">
+                <a href="https://Xpiki.github.io//post/qian-duan-csscss-xuan-ze-qi">
                   <h3 class="post-title">
-                    [积累]English
+                    [前端]Css选择器
                   </h3>
                 </a>
               </div>

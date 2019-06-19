@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>[前端]Css-css引用的三种方法及其优先级 | pk&#39;s blog</title>
+<title>[前端]两栏布局 | pk&#39;s blog</title>
 <meta name="description" content="不求甚解">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -92,51 +92,62 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">[前端]Css-css引用的三种方法及其优先级</h2>
-            <div class="post-date">2019-06-07</div>
+            <h2 class="post-title">[前端]两栏布局</h2>
+            <div class="post-date">2019-06-19</div>
+            
+              <div class="feature-container" style="background-image: url('https://Xpiki.github.io//post-images/qian-duan-liang-lan-bu-ju.png')">
+              </div>
             
             <div class="post-content">
-              <h1 id="css引用的三种方法优先级">CSS引用的三种方法(优先级)</h1>
-<h2 id="内联式css设置">内联式CSS设置</h2>
-<p>把css代码直接写在现有的html标签中 如：</p>
-<pre><code>&lt;p style=&quot;color:red&quot;&gt;这里文字是红色。&lt;/p&gt;
+              <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .left{
+        position: absolute;
+        /* 绝对定位脱离文档流,下面的div会顶上来 */
+        right: 0px;
+        background-color: black;
+        height: 100px;
+        width: 100px;
+        opacity: 0.5;
+    }
+
+    .right{
+        /* 不设宽度的div 宽度随浏览器的宽度 */
+        background-color: #fcc;
+        height: 100px;
+        margin-right: 100px;
+
+    }
+    
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;left&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;right&quot;&gt;&lt;/div&gt;
+    &lt;!-- &lt;div class=&quot;left&quot;&gt;&lt;/div&gt; --&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
-<h2 id="嵌入式css设置">嵌入式CSS设置</h2>
-<p>把css代码写在<style></style>标签之间</p>
-<pre><code>&lt;style type=&quot;text/css&quot;&gt;
-span{
-color:red;
-}
-&lt;/style&gt;
-</code></pre>
-<h2 id="外部式css设置">外部式CSS设置</h2>
-<p>把css代码写成一个单独的外部文件 在<head>内使用<link>引入</p>
-<pre><code>&lt;link href=&quot;index.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
-</code></pre>
-<h2 id="优先级顺序">优先级顺序</h2>
-<p><strong>在三个方法权值相同的情况下，并且嵌入式在外部式前面调用
-(内联式 &gt; 嵌入式 &gt; 外部式)</strong></p>
 
             </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://Xpiki.github.io//tag/9oBUmXaUM" class="tag">
-                    css
-                  </a>
-                
-                  <a href="https://Xpiki.github.io//tag/8syiHFMDl" class="tag">
-                    我爱前端
-                  </a>
-                
-              </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://Xpiki.github.io//post/qian-duan-english">
+                <a href="https://Xpiki.github.io//post/qian-duan-wu-huan-ju-zhong">
                   <h3 class="post-title">
-                    [积累]English
+                    [前端]五环居中
                   </h3>
                 </a>
               </div>
