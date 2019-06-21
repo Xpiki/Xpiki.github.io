@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Xpiki.github.io/</id>
     <title>pk&apos;s blog</title>
-    <updated>2019-06-21T01:57:45.918Z</updated>
+    <updated>2019-06-21T01:59:49.176Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Xpiki.github.io/"/>
     <link rel="self" href="https://Xpiki.github.io//atom.xml"/>
@@ -10,16 +10,6 @@
     <logo>https://Xpiki.github.io//images/avatar.png</logo>
     <icon>https://Xpiki.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, pk&apos;s blog</rights>
-    <entry>
-        <title type="html"><![CDATA[nice]]></title>
-        <id>https://Xpiki.github.io//post/nice</id>
-        <link href="https://Xpiki.github.io//post/nice">
-        </link>
-        <updated>2019-06-21T01:57:34.000Z</updated>
-        <content type="html"><![CDATA[<pre><code>&lt;iframe width=&quot;530&quot; height=&quot;298&quot; src=&quot;https://avgle.com/embed/8f6b236f00df9166d7c4&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
-</code></pre>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[[前端]两栏布局]]></title>
         <id>https://Xpiki.github.io//post/qian-duan-liang-lan-bu-ju</id>
